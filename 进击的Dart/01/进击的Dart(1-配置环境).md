@@ -20,7 +20,7 @@
 * Windows(64位)
 
   ```
-  https://storage.googleapis.com/dart-archive/channels/stable/release/2.4.0/sdk/dartsdk-windows-x64-release
+  https://storage.googleapis.com/dart-archive/channels/stable/release/2.4.0/sdk/dartsdk-windows-x64-release.zip
   ```
 
   
@@ -45,11 +45,19 @@
   4. 保存bash_profile并生效环境配置 `source .bash_profile`
   5. 终端验证Dart环境是否配置成功 `dart --version`
 
-![01-dart version](/Volumes/Extend/学习笔记/进击的Dart/01/01-dart version.png)
+![01-dart version](01-dart version.png)
 
 * Windows
 
+  1. 我的电脑->控制面板->系统和安全->系统->高级系统设置->高级->环境变量
 
+  2. 新增Path, 增加dart-sdk/bin的地址
+
+     ![04-windows env](E:\code\dwj\AdvancingDart\进击的Dart\01\04-windows env.png)
+
+  3. 终端验证Dart环境是否配置成功 `dart --version
+
+     ![05-windows dart version](E:\code\dwj\AdvancingDart\进击的Dart\01\05-windows dart version.png)
 
 ## 开发Tools
 
@@ -64,11 +72,11 @@
 
 
 
-***这里我们选择VS Code,原因不多说,因为强大! ***
+**这里我们选择VS Code,原因不多说,因为强大! **
 
 1. 安装Dart插件 — Extensions -> dart
 
-![02-vs dart plugin](/Volumes/Extend/学习笔记/进击的Dart/01/02-vs dart plugin.png)
+![02-vs dart plugin](02-vs dart plugin.png)
 
 2. 重启VS Code
 
@@ -113,5 +121,5 @@
 
 6. 收工！
 
-   ![03-vs helloworld console](/Volumes/Extend/学习笔记/进击的Dart/01/03-vs helloworld console.png)
+   ![03-vs helloworld console](03-vs helloworld console.png)
 
