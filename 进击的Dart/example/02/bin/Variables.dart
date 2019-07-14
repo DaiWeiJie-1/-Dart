@@ -37,6 +37,6 @@ main(List<String> args) {
 
     //default value is null
     var uninitValue;
-    assert(uninitValue == null);
+    assert(uninitValue == null); //assert方法如果返回false,会报错
 
 }
