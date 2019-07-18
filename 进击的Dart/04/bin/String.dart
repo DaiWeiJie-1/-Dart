@@ -31,8 +31,48 @@ main(List<String> args) {
     print("s7 = $s7");
 
 
-    //contains() - 判断字符串是否包含指定字符串
+    //字符串包含
+    //contains("") - 判断字符串是否包含指定字符串
+    //startsWith("") - 判断是否以指定字符串未起始
+    //endswith("") - 判断是否以指定字符串结束
     String s8 = "hello world";
     print("$s8 contains 'll' = ${s8.contains("ll")}");
+    print("$s8 startswith 'hel' = ${s8.startsWith("hel")}");
+    print("$s8 endswith 'orld' = ${s8.endsWith("orld")}");
+
+
+
+    //字符串截取
+    //substring(int start) - 截取字符串内容从index为start到结尾
+    String s9 = "hello world";
+    var s9sub = s9.substring(2);
+    print("s9 substr 2 to end = $s9sub");
+    //substring(int start,int end) - 截取字符串内容从index 为 start到end
+    var s9subwithend = s9.substring(3,6);
+    print("s9 substr 3 to 6 = $s9subwithend");
+
+    // split("") - 以指定字符串分割字符串
+    var s9split = s9.split(" ");
+    for(var spl in s9split){
+      print("s9 substr = " + spl);
+    }
+
+
+    //字符串替换(可以用正则)
+    var s10 = "hello world";
+    //替换第一个遇见的匹配字符串
+    var s10ReplaceFirstL = s10.replaceFirst(new RegExp("l"), "P");
+    //替换所有遇见的匹配字符串
+    var s10ReplaceAllL = s10.replaceAll(new RegExp('l'), "P");
+    print("s10 replace first L  = $s10ReplaceFirstL");
+    print("s10 replace all L  = $s10ReplaceAllL");
+
+    //string构造器,类似java的stringBuilder,当调用toString后真正构建出完整string
+    var sb = StringBuffer();
+    sb.write("hello");
+    sb.write(" ");
+    sb.writeAll(["world","my","friend"]," ");
+    print(sb.toString());
+
 
 }
