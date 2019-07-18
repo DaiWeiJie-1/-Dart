@@ -4,7 +4,13 @@
 
 
 
-> Dart 的num类型下有`int`和`double`两种
+> Dart 的`num`类型下有`int`和`double`两种, `num`是基类,`int`和`double`继承于它。
+
+
+
+## num
+
+> `int`和`double`的基类. 
 
 
 
