@@ -6,6 +6,24 @@ main(List<String> args) {
     var s2 = 'hello my 2 friends';
     String s3 = "hello my 3 friends";
 
+    //string构造器,类似java的stringBuilder,当调用toString后真正构建出完整string
+    var sb = StringBuffer();
+    sb.write("hello");
+    sb.write(" ");
+    sb.writeAll(["world","my","friend"]," ");
+    print(sb.toString());
+
+    var sa = 'hello' + ' ' + 'my' + ' ' + 'world';
+    print(sa); 
+
+    // $ -- 插值拼接
+    var name = 'xiaoming';
+    var name2 = 'xiaohong';
+    var sp = 'Hello $name';
+    var sp2 = 'Hello ${name + '&&' + name2}';
+    print(sp);
+    print(sp2);
+    
 
     // string 是 object对象,  == 在string上使用比较的是字符串内容是否相等
     var s4 = "hello my friends";
@@ -13,6 +31,15 @@ main(List<String> args) {
     String s6 = 'hello my friends';
     print(s4 == s5);
     print(s4 == s6);
+
+    // compareTo(String otherStr) — 用来对比字典序,小于参数字符串则返回`-1`;两者相等返回`0`;大于参数字符串则返回`1`
+    var s12 = 'ab';
+    var s13 = 'ac';
+    var s14 = 'bc';
+    var s15 = 'ac';
+    print('ab compare to ac = ${s12.compareTo(s13)}'); // ab compare to ac = -1
+    print('ac compare to ac = ${s13.compareTo(s15)}'); // ac compare to ac = 0
+    print('bc compare to ac = ${s14.compareTo(s15)}'); // bc compare to ac = 1
 
     //print - + 用来append
     print("s1 = " + s1 + ";s2 = " + s2 + ";s3 = " + s3);
@@ -67,12 +94,6 @@ main(List<String> args) {
     print("s10 replace first L  = $s10ReplaceFirstL");
     print("s10 replace all L  = $s10ReplaceAllL");
 
-    //string构造器,类似java的stringBuilder,当调用toString后真正构建出完整string
-    var sb = StringBuffer();
-    sb.write("hello");
-    sb.write(" ");
-    sb.writeAll(["world","my","friend"]," ");
-    print(sb.toString());
 
 
 }
